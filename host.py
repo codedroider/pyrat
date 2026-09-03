@@ -4,9 +4,14 @@ HOST = '0.0.0.0'
 PORT = 5005
 
 print(r"""
-(no art today xppp)
-
+                             __   
+______ ___.__.____________ _/  |_ 
+\____ <   |  |\_  __ \__  \\   __\
+|  |_> >___  | |  | \// __ \|  |  
+|   __// ____| |__|  (____  /__|  
+|__|   \/                 \/      
 """)
+print('by github.com/codedroider')
 
 def start_server():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -29,8 +34,7 @@ def start_server():
             if command.lower() == 'exit':
                 break
                 
-            response = client_socket.recv(4096).decode('utf-8', errors='replace')
-            print(response)
+            print(" Command sent to client.")
             
         except Exception as e:
             print(f" Connection error: {e}")
